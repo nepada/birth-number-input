@@ -1,0 +1,5 @@
+extensions:
+    - Nepada\Bridges\BirthNumberInputDI\BirthNumberInputExtension
+
+di:
+    debugger: false
