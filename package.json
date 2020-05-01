@@ -1,0 +1,57 @@
+{
+    "name": "@nepada/birth-number-input",
+    "version": "1.0.0",
+    "description": "Client side validation of Birth number form input for Nette forms.",
+    "keywords": [
+        "birth number",
+        "input",
+        "form",
+        "validation",
+        "nette"
+    ],
+    "author": {
+        "name": "Petr Morávek",
+        "email": "petr@pada.cz"
+    },
+    "license": "BSD-3-Clause",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nepada/birth-number-input.git"
+    },
+    "bugs": "https://github.com/nepada/birth-number-input/issues",
+    "peerDependencies": {
+        "nette-forms": "^3.0.3"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.8.4",
+        "@babel/core": "^7.9.6",
+        "@babel/preset-env": "^7.9.6",
+        "@nepada/eslint-config": "^1.4.0",
+        "@rollup/plugin-babel": "^5.0.0",
+        "@rollup/plugin-commonjs": "^11.1.0",
+        "@rollup/plugin-node-resolve": "^7.1.3",
+        "eslint": "^6.8.0",
+        "eslint-plugin-import": "^2.20.2",
+        "eslint-plugin-jest": "^23.8.2",
+        "jest": "^25.5.3",
+        "nette-forms": "^3.0.3",
+        "rollup": "^2.7.6",
+        "rollup-plugin-node-builtins": "^2.1.2",
+        "rollup-plugin-node-globals": "^1.4.0",
+        "rollup-plugin-terser": "^5.3.0"
+    },
+    "main": "dist/commonjs/index.js",
+    "module": "src/assets/index.js",
+    "files": [
+        "src/assets",
+        "dist"
+    ],
+    "scripts": {
+        "lint": "eslint src/assets build tests/*.js tests/assets",
+        "test": "jest --config tests/jest.config.js tests/assets/**.test.js",
+        "clean": "rm -rf ./dist/*",
+        "build:cjs": "rollup --config build/rollup.config.cjs.js",
+        "build:umd": "rollup --config build/rollup.config.umd.js",
+        "build": "npm run clean && npm run build:cjs && npm run build:umd"
+    }
+}

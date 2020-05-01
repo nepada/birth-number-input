@@ -3,3 +3,5 @@
 /phpstan*.neon
 /.phpcs.xml
 /.phpcs-cache
+/node_modules
+/yarn.lock
