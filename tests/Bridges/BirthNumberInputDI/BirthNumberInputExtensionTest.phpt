@@ -4,6 +4,7 @@ declare(strict_types = 1);
 namespace NepadaTests\Bridges\BirthNumberInputDI;
 
 use Nepada\BirthNumberInput\BirthNumberInput;
+use NepadaTests\Environment;
 use NepadaTests\TestCase;
 use Nette;
 use Nette\Forms\Form;
@@ -21,7 +22,7 @@ class BirthNumberInputExtensionTest extends TestCase
     public function testBirthNumberInput(): void
     {
         $configurator = new Nette\Configurator();
-        $configurator->setTempDirectory(TEMP_DIR);
+        $configurator->setTempDirectory(Environment::getTempDir());
         $configurator->setDebugMode(true);
         $configurator->addConfig(__DIR__ . '/fixtures/config.neon');
         $configurator->createContainer();
