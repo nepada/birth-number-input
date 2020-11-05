@@ -1,7 +1,7 @@
 Czech birth number form input
 =============================
 
-[![Build Status](https://travis-ci.org/nepada/birth-number-input.svg?branch=master)](https://travis-ci.org/nepada/birth-number-input)
+[![Build Status](https://github.com/nepada/birth-number-input/workflows/CI/badge.svg)](https://github.com/nepada/birth-number-input/actions?query=workflow%3ACI+branch%3Amaster)
 [![Coverage Status](https://coveralls.io/repos/github/nepada/birth-number-input/badge.svg?branch=master)](https://coveralls.io/github/nepada/birth-number-input?branch=master)
 [![Downloads this Month](https://img.shields.io/packagist/dm/nepada/birth-number-input.svg)](https://packagist.org/packages/nepada/birth-number-input)
 [![Latest stable](https://img.shields.io/packagist/v/nepada/birth-number-input.svg)](https://packagist.org/packages/nepada/birth-number-input)
