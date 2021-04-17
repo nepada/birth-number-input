@@ -71,7 +71,7 @@ class BirthNumberInputTest extends TestCase
         $this->resetHttpGlobalVariables();
         $_POST['birthNumber'] = '';
 
-        $form = new Form();
+        $form = $this->createForm();
         $birthNumberInput = new BirthNumberInput();
         $form['birthNumber'] = $birthNumberInput;
         $form->fireEvents();
@@ -91,7 +91,7 @@ class BirthNumberInputTest extends TestCase
         $this->resetHttpGlobalVariables();
         $_POST['birthNumber'] = '/';
 
-        $form = new Form();
+        $form = $this->createForm();
         $birthNumberInput = new BirthNumberInput();
         $form['birthNumber'] = $birthNumberInput;
         $birthNumberInput->setEmptyValue('/');
@@ -112,7 +112,7 @@ class BirthNumberInputTest extends TestCase
         $this->resetHttpGlobalVariables();
         $_POST['birthNumber'] = '000101 / 0009';
 
-        $form = new Form();
+        $form = $this->createForm();
         $birthNumberInput = new BirthNumberInput();
         $form['birthNumber'] = $birthNumberInput;
         $form->fireEvents();
@@ -133,7 +133,7 @@ class BirthNumberInputTest extends TestCase
         $this->resetHttpGlobalVariables();
         $_POST['birthNumber'] = '000101 / 0000';
 
-        $form = new Form();
+        $form = $this->createForm();
         $birthNumberInput = new BirthNumberInput();
         $form['birthNumber'] = $birthNumberInput;
         $birthNumberInput->setRequired('true');
@@ -155,6 +155,14 @@ class BirthNumberInputTest extends TestCase
         $_COOKIE['_nss'] = '1';
         $_POST = [];
         $_GET = [];
+    }
+
+    private function createForm(): Form
+    {
+        $form = new Form();
+        $form->onSubmit[] = function (): void {
+        };
+        return $form;
     }
 
 }
