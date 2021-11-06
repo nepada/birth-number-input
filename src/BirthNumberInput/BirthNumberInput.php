@@ -29,6 +29,7 @@ class BirthNumberInput extends TextInput
 
     public function getValue(): ?BirthNumber
     {
+        /** @var BirthNumber|null $value */
         $value = parent::getValue();
         return $value;
     }
