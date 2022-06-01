@@ -6,14 +6,14 @@ namespace Nepada\BirthNumberInput;
 use Nepada\BirthNumber\BirthNumber;
 use Nepada\BirthNumber\InvalidBirthNumberException;
 use Nette;
-use Nette\Forms\IControl;
+use Nette\Forms\Control;
 
 final class Validator
 {
 
     use Nette\StaticClass;
 
-    public static function validateBirthNumber(IControl $control): bool
+    public static function validateBirthNumber(Control $control): bool
     {
         $value = self::castToBirthNumber($control->getValue());
         return $value instanceof BirthNumber;
