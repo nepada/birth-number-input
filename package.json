@@ -1,6 +1,7 @@
 {
     "name": "@nepada/birth-number-input",
     "version": "1.0.0",
+    "type": "module",
     "description": "Client side validation of Birth number form input for Nette forms.",
     "keywords": [
         "birth number",
