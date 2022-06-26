@@ -1,7 +1,7 @@
 import commonjs from '@rollup/plugin-commonjs';
 import nodeBuiltins from 'rollup-plugin-node-builtins';
 import nodeGlobals from 'rollup-plugin-node-globals';
-import nodeResolve from '@rollup/plugin-node-resolve';
+import {nodeResolve} from '@rollup/plugin-node-resolve';
 
 
 export default {
@@ -9,6 +9,7 @@ export default {
     output: {
         dir: 'dist/commonjs',
         format: 'cjs',
+        exports: 'auto',
         sourcemap: true,
     },
     preserveModules: true,
