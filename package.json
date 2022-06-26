@@ -20,7 +20,7 @@
     },
     "bugs": "https://github.com/nepada/birth-number-input/issues",
     "peerDependencies": {
-        "nette-forms": "^3.0.3"
+        "nette-forms": "^3.1.0"
     },
     "devDependencies": {
         "@babel/cli": "^7.8.4",
@@ -34,7 +34,7 @@
         "eslint-plugin-import": "^2.20.2",
         "eslint-plugin-jest": "^23.8.2",
         "jest": "^25.5.3",
-        "nette-forms": "^3.0.3",
+        "nette-forms": "^3.1.0",
         "rollup": "^2.7.6",
         "rollup-plugin-node-builtins": "^2.1.2",
         "rollup-plugin-node-globals": "^1.4.0",
