@@ -22,10 +22,8 @@ class ValidatorTest extends TestCase
 
     /**
      * @dataProvider getDataForValidateBirthNumber
-     * @param mixed $value
-     * @param bool $isValid
      */
-    public function testValidateBirthNumber($value, bool $isValid): void
+    public function testValidateBirthNumber(mixed $value, bool $isValid): void
     {
         $control = $this->mockControl($value);
         Assert::same($isValid, Validator::validateBirthNumber($control));
@@ -69,10 +67,9 @@ class ValidatorTest extends TestCase
     }
 
     /**
-     * @param mixed $value
      * @return Control&MockInterface
      */
-    private function mockControl($value): Control
+    private function mockControl(mixed $value): Control
     {
         $control = \Mockery::mock(Control::class);
         $control->shouldReceive('getValue')->andReturn($value);

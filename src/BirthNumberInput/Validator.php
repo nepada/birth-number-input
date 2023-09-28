@@ -19,11 +19,7 @@ final class Validator
         return $value instanceof BirthNumber;
     }
 
-    /**
-     * @param mixed $value
-     * @return BirthNumber|null
-     */
-    private static function castToBirthNumber($value): ?BirthNumber
+    private static function castToBirthNumber(mixed $value): ?BirthNumber
     {
         if ($value instanceof BirthNumber || $value === null) {
             return $value;

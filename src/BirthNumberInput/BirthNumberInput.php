@@ -16,10 +16,7 @@ class BirthNumberInput extends TextInput
 
     public const VALID = Validator::class . '::validateBirthNumber';
 
-    /**
-     * @param string|Html<mixed>|null $label
-     */
-    public function __construct($label = null)
+    public function __construct(string|Html|null $label = null)
     {
         parent::__construct($label);
         $this->setNullable();
@@ -36,10 +33,9 @@ class BirthNumberInput extends TextInput
 
     /**
      * @internal
-     * @param mixed $value
-     * @return static
+     * @return $this
      */
-    public function setValue($value): self
+    public function setValue(mixed $value): static
     {
         if (is_string($value)) {
             $value = BirthNumber::fromString($value);
@@ -59,9 +55,9 @@ class BirthNumberInput extends TextInput
 
     /**
      * @param BirthNumber|string|null $value
-     * @return static
+     * @return $this
      */
-    public function setDefaultValue($value): self
+    public function setDefaultValue(mixed $value): static
     {
         parent::setDefaultValue($value);
         return $this;

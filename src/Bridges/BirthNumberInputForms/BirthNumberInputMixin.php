@@ -9,12 +9,7 @@ use Nette\Utils\Html;
 trait BirthNumberInputMixin
 {
 
-    /**
-     * @param string|int $name
-     * @param string|Html|null $label
-     * @return BirthNumberInput
-     */
-    public function addBirthNumber($name, $label = null): BirthNumberInput
+    public function addBirthNumber(string|int $name, string|Html|null $label = null): BirthNumberInput
     {
         return $this[$name] = new BirthNumberInput($label);
     }
