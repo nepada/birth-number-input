@@ -6,6 +6,7 @@ namespace Nepada\Bridges\BirthNumberInputForms;
 use Nepada\BirthNumberInput\BirthNumberInput;
 use Nette;
 use Nette\Forms\Container;
+use Nette\Utils\Html;
 
 class ExtensionMethodRegistrator
 {
@@ -16,7 +17,7 @@ class ExtensionMethodRegistrator
     {
         Container::extensionMethod(
             'addBirthNumber',
-            fn (Container $container, $name, $label = null): BirthNumberInput => $container[$name] = new BirthNumberInput($label),
+            fn (Container $container, string|int $name, string|Html|null $label = null): BirthNumberInput => $container[(string) $name] = new BirthNumberInput($label),
         );
     }
 
