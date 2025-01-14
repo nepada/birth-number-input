@@ -30,7 +30,7 @@ class ValidatorTest extends TestCase
     }
 
     /**
-     * @return mixed[]
+     * @return list<mixed[]>
      */
     protected function getDataForValidateBirthNumber(): array
     {

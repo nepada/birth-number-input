@@ -20,6 +20,7 @@ class BirthNumberInput extends TextInput
     {
         parent::__construct($label);
         $this->setNullable();
+        /** @var string $invalidValueErrorMessage */
         $invalidValueErrorMessage = NetteFormsValidator::$messages[self::VALID] ?? 'Please enter a valid birth number.';
         $this->addRule(self::VALID, $invalidValueErrorMessage);
     }
