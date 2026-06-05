@@ -45,7 +45,7 @@ class BirthNumberInput extends TextInput
                 sprintf(
                     'Value must be null, BirthNumber instance, or string with a valid birth number, %s given in field "%s".',
                     gettype($value),
-                    $this->name,
+                    $this->getName(),
                 ),
             );
         }
