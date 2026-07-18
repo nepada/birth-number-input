@@ -21,7 +21,7 @@ class BirthNumberInputMixinTest extends TestCase
         $form = new TestForm();
         $input = $form->addBirthNumber('test', 'Label');
         Assert::type(BirthNumberInput::class, $input);
-        Assert::same('Label', $input->caption);
+        Assert::same('Label', $input->getCaption());
         Assert::same($input, $form['test']);
     }
 
