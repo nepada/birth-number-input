@@ -23,7 +23,10 @@ class ValidatorTest extends TestCase
     /**
      * @dataProvider getDataForValidateBirthNumber
      */
-    public function testValidateBirthNumber(mixed $value, bool $isValid): void
+    public function testValidateBirthNumber(
+        mixed $value,
+        bool $isValid,
+    ): void
     {
         $control = $this->mockControl($value);
         Assert::same($isValid, Validator::validateBirthNumber($control));
